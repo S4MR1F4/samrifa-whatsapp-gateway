@@ -1,0 +1,17 @@
+{
+  "name": "samrifa-whatsapp-gateway",
+  "version": "1.0.0",
+  "description": "Samrifa WhatsApp Gateway — A Node.js-based API service to send WhatsApp messages via whatsapp-web.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Samrifa Software Development",
+  "dependencies": {
+    "express": "^4.18.2",
+    "whatsapp-web.js": "^1.21.1",
+    "qrcode-terminal": "^0.12.0",
+    "dotenv": "^16.0.3",
+    "body-parser": "^1.20.2"
+  }
+}
