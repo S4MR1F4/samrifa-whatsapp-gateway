@@ -15,6 +15,19 @@ Layanan WhatsApp API sederhana dan gratis. Dikembangkan oleh Samrifa Software De
 
 - ✅ Send Message
 
+## Screenshoot
+
+- Ketika Terkoneksi Dengan Whatsapp
+<p align="center">
+  <img src="https://raw.githubusercontent.com/S4MR1F4/samrifa-whatsapp-gateway/main/connected.png" alt="Terkonek" width="50%"/>
+</p>
+
+---
+- Ketika Proses Logout dan Proses Login dengan Qrcode
+<p align="center">
+  <img src="https://raw.githubusercontent.com/S4MR1F4/samrifa-whatsapp-gateway/main/qrcode.png" alt="QR Code" width="50%"/>
+</p>
+
 ---
 
 <p align="center">
