@@ -34,6 +34,7 @@ class WhatsAppManager {
     client.on("qr", (qr) => {
       console.log(`🔐 QR for session: ${sessionName}`);
       qrcode.generate(qr, { small: true });
+      client._qr = qr; // simpan qr agar bisa diakses lewat API
     });
 
     client.on("loading_screen", (percent, message) => {
@@ -55,7 +56,7 @@ class WhatsAppManager {
 
     client.on("disconnected", (reason) => {
       console.warn(`⚠️ Session '${sessionName}' disconnected: ${reason}`);
-      delete this.sessions[sessionName];
+    //   delete this.sessions[sessionName];
       delete this.readyStatus[sessionName];
     });
 

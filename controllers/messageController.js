@@ -1,4 +1,5 @@
 const waManager = require("../services/whatsappManager");
+const logger = require("../services/logger");
 
 exports.sendMessage = async (req, res) => {
   const { number, message, session } = req.body;
@@ -27,8 +28,26 @@ exports.sendMessage = async (req, res) => {
   }
 
   try {
-    const chatId = `${number}@c.us`; // untuk user
+    let chatId;
+
+    if (number.endsWith("@g.us")) {
+      // Kirim ke group
+      chatId = number;
+    } else {
+      // Kirim ke user
+      const numberId = await client.getNumberId(number);
+      if (!numberId) {
+        return res.status(400).json({
+          success: false,
+          message: `The number ${number} is not registered on WhatsApp`
+        });
+      }
+      chatId = numberId._serialized;
+    }
+
     await client.sendMessage(chatId, message);
+
+    logger.logMessage(sessionName, number, message);
 
     return res.status(200).json({
       success: true,
