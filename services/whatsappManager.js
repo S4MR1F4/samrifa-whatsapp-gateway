@@ -56,7 +56,7 @@ class WhatsAppManager {
 
     client.on("disconnected", (reason) => {
       console.warn(`⚠️ Session '${sessionName}' disconnected: ${reason}`);
-    //   delete this.sessions[sessionName];
+      delete this.sessions[sessionName];
       delete this.readyStatus[sessionName];
     });
 

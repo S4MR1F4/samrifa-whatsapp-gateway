@@ -1,3 +1,4 @@
+// controllers/logController.js
 const logger = require("../services/logger");
 
 exports.listLogs = (req, res) => {

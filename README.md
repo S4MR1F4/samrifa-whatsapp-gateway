@@ -45,6 +45,14 @@ GET /api/logs?session=gateway
 GET /api/logs/gateway?target=xxxxx
 ```
 
+#### 3. create session
+```
+POST /api/connect
+{
+    session=session_name
+}
+```
+
 ---
 
 <p align="center">

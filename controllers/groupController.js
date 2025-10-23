@@ -1,3 +1,4 @@
+// controllers/groupController.js
 const waManager = require("../services/whatsappManager");
 
 exports.listGroups = async (req, res) => {

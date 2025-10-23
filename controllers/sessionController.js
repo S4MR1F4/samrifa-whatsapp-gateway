@@ -1,3 +1,4 @@
+// controllers/sessionController.js
 const waManager = require("../services/whatsappManager");
 
 exports.connectSession = (req, res) => {

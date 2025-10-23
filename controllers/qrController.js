@@ -1,3 +1,4 @@
+// controllers/qrController.js
 const waManager = require("../services/whatsappManager");
 
 exports.getQR = (req, res) => {
